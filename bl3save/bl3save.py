@@ -265,10 +265,12 @@ class BL3Save(object):
 
         # Next: Equip slots
         self.equipslots = {}
-        for e in self.save.equipped_inventory_list:
-            equip = BL3EquipSlot(e)
-            slot = slotobj_to_slot[equip.get_obj_name()]
-            self.equipslots[slot] = equip
+
+        # disabled until balances can be generated
+        # for e in self.save.equipped_inventory_list:
+        #     equip = BL3EquipSlot(e)
+        #     slot = slotobj_to_slot[equip.get_obj_name()]
+        #     self.equipslots[slot] = equip
 
     def import_json(self, json_str):
         """

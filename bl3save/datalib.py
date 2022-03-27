@@ -219,8 +219,8 @@ class BL3Serial(object):
         Decrypts (really just de-obfuscates) the serial number.
         """
 
-        # Initial byte should always be 3 or, after the 2021-04-08 patch, 4.
-        assert(serial[0] == 3 or serial[0] == 4)
+        # wonderlands == 5 (patch 0)
+        assert(serial[0] == 3 or serial[0] == 4 or serial[0] == 5 )
         serial_version = serial[0]
 
         # Seed does need to be an unsigned int
